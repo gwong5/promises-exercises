@@ -7,7 +7,7 @@
 ## Day 3
 
 - [x] Look at the documentation of the pg-promise repository
-- [ ] Exercises 1-7 in the pg promise exercises are complete
+- [x] Exercises 1-7 in the pg promise exercises are complete
 - [x] Exercise 1
 - [x] Exercise 2
 - [x] Exercise 3
@@ -31,7 +31,7 @@
  - [x] src/10-an-important-file.js
  - [x] src/11-multiple-promises.js
  - [x] src/12-fetch-json.js
- - [ ] src/13-do-some-work.js
+ - [x] src/13-do-some-work.js
 
 ## General
 

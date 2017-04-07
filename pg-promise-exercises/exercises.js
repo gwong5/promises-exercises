@@ -211,7 +211,7 @@ const bookAuthors = [{
 findBookAuthors.then(authors => {
   assert.deepEqual(authors.length, 15)
   assert.deepEqual(authors, bookAuthors)
-  assert.deepEqual(authors[3] && authors[10], bookAuthors[3] && bookAuthors[10])
+  assert.deepEqual(authors[3] && authors[6] && authors[10], bookAuthors[3] && bookAuthors[6] && bookAuthors[10])
 }).catch(error => {
   console.log('These are not the authors you are looking for', error)
 })
