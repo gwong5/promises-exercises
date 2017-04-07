@@ -1,0 +1,14 @@
+{
+  "name": "promise-it-wont-hurt-solutions",
+  "version": "1.0.0",
+  "description": "This repo contains all the source files for the solutions of the `promise it won't hurt` exercises. The tutorial is meant to give you a hands on understanding of how to use promises.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "promise-it-wont-hurt": "^1.0.0-alpha.2"
+  }
+}
