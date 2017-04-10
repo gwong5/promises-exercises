@@ -27,14 +27,15 @@ const db = pg(postgresConfig)
 
 
 
-const allBooks = db.any('SELECT * FROM books')
 /* This is calling the `then` function on the `allBooks` promise, and checks if
    we get back 15 rows. This assertion will fail. Make it PASS!*/
+const allBooks = db.any('SELECT * FROM books')
 allBooks.then(books => {
-  assert.deepEqual(books.length, 15)
-}).catch(error => {
-  console.log('Dang, my assertion failed.', error)
-})
+    assert.deepEqual(books.length, 15)
+  })
+  .catch(error => {
+    console.log('Dang, my assertion failed.', error)
+  })
 
 /* --------End of Exercise 1---------------- */
 
@@ -57,10 +58,11 @@ allBooks.then(books => {
 
 const firstTenBooks = db.any('SELECT title FROM books LIMIT 10') // = .... IMPLEMENT THIS FUNCTION
 firstTenBooks.then(books => {
-  assert(books.length, 10)
-}).catch(error => {
-  console.log('Whoops, my function doesnt behave as expected.', error)
-})
+    assert(books.length, 10)
+  })
+  .catch(error => {
+    console.log('Whoops, my function doesnt behave as expected.', error)
+  })
 
 /* --------End of Exercise 2---------------- */
 
@@ -85,12 +87,13 @@ firstTenBooks.then(books => {
 
 const findAuthorsOrderedByLastName = db.any('SELECT * FROM authors ORDER BY last_name') // = .... IMPLEMENT THIS FUNCTION
 findAuthorsOrderedByLastName.then(authors => {
-  assert.deepEqual(authors.length, 19)
-  assert.deepEqual(authors[0].last_name, 'Alcott')
-  assert.deepEqual(authors[18].last_name, 'Worsley')
-}).catch(error => {
-  console.log('Whoops, my function doesnt behave as expected.', error)
-})
+    assert.deepEqual(authors.length, 19)
+    assert.deepEqual(authors[0].last_name, 'Alcott')
+    assert.deepEqual(authors[18].last_name, 'Worsley')
+  })
+  .catch(error => {
+    console.log('Whoops, my function doesnt behave as expected.', error)
+  })
 
 /* --------End of Exercise 3---------------- */
 
@@ -209,12 +212,13 @@ const bookAuthors = [{
 ]
 
 findBookAuthors.then(authors => {
-  assert.deepEqual(authors.length, 15)
-  assert.deepEqual(authors, bookAuthors)
-  assert.deepEqual(authors[3] && authors[6] && authors[10], bookAuthors[3] && bookAuthors[6] && bookAuthors[10])
-}).catch(error => {
-  console.log('These are not the authors you are looking for', error)
-})
+    assert.deepEqual(authors.length, 15)
+    assert.deepEqual(authors, bookAuthors)
+    assert.deepEqual(authors[3] && authors[6] && authors[10], bookAuthors[3] && bookAuthors[6] && bookAuthors[10])
+  })
+  .catch(error => {
+    console.log('These are not the authors you are looking for', error)
+  })
 /* --------End of Exercise 4---------------- */
 
 
@@ -250,12 +254,13 @@ const idOfAuthorsWithTwoBooks = [{
   }
 ]
 authorIdWithTwoBooks.then(authorId => {
-  assert.deepEqual(authorId.length, 2)
-  assert.deepEqual(authorId, idOfAuthorsWithTwoBooks)
-  assert.deepEqual(authorId[1], idOfAuthorsWithTwoBooks[1])
-}).catch(error => {
-  console.log('check again', error)
-})
+    assert.deepEqual(authorId.length, 2)
+    assert.deepEqual(authorId, idOfAuthorsWithTwoBooks)
+    assert.deepEqual(authorId[1], idOfAuthorsWithTwoBooks[1])
+  })
+  .catch(error => {
+    console.log('check again', error)
+  })
 /* --------End of Exercise 5---------------- */
 
 
@@ -304,11 +309,12 @@ const multipleEditions = [{
 ]
 
 bookTitlesWithMultipleEditions.then(books => {
-  assert.deepEqual(books.length, 5)
-  assert.deepEqual(books, multipleEditions)
-}).catch(error => {
-  console.log('Which edition do you have?', error)
-})
+    assert.deepEqual(books.length, 5)
+    assert.deepEqual(books, multipleEditions)
+  })
+  .catch(error => {
+    console.log('Which edition do you have?', error)
+  })
 /* --------End of Exercise 6---------------- */
 
 
@@ -349,12 +355,13 @@ const inStock = [{
 ]
 
 findStockedBooks.then(stockedBooks => {
-  assert.deepEqual(stockedBooks.length, 2)
-  assert.deepEqual(stockedBooks, inStock)
-  assert.deepEqual(stockedBooks[1], inStock[1])
-}).catch(error => {
-  console.log('Time to do inventory!', error)
-})
+    assert.deepEqual(stockedBooks.length, 2)
+    assert.deepEqual(stockedBooks, inStock)
+    assert.deepEqual(stockedBooks[1], inStock[1])
+  })
+  .catch(error => {
+    console.log('Time to do inventory!', error)
+  })
 /* --------End of Exercise 7---------------- */
 
 
