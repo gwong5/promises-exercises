@@ -1,0 +1,16 @@
+{
+  "name": "pg-promise-exercises",
+  "version": "1.0.0",
+  "description": "Exercises which tickles your JavaScript Promises knowledge.",
+  "main": "exercises.js",
+  "dependencies": {
+    "assert": "^1.4.1",
+    "pg-promise": "^5.6.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT"
+}
